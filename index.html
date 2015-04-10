@@ -11,6 +11,9 @@
       patientId   = getURLParameter('PAT_PersonId');
       encounterId = getURLParameter('VIS_EncntrId');
 
+      patientId = patientId.replace(/.00$/, "");
+      encounterId = encounterId.replace(/.00$/, "");
+
       url = 'http://xgapps.xghealth.com/Engine.aspx?app=%7bca274a91-1779-414d-a6dc-1394355a0915%7d&'
             + 'patID=' + patientId
             + '&csn=' + encounterId
