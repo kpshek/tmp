@@ -7,14 +7,9 @@
   Cookie Test App
   cookie: <span id='cookie'></span>
   <p />
-  <input id="myButton" type="button" value="foo" onclick="nWin('http://kpshek.github.io/tmp/cookie.html');" />
+  <input id="myButton" type="button" value="foo" onclick="window.open(document.URL, new Date(), 'left=300,top=100,width=400, height=300,scrollbars=1');" />
 
   <script>
-    function nWin(url) {
-      window.open(url, "MsgWindow", "left=300,top=100,width=800, height=800,scrollbars=1");
-      return false;
-    }
-
     var cookie = document.cookie;
     var i = cookie.replace(/(?:(?:^|.*;\s*)myCookie\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     document.getElementById('cookie').innerHTML = cookie;
