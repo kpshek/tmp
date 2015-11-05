@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cookie Test Application</title>
+  </head>
+  Cookie Test App
+  cookie: <span id='cookie'></span>
+  <p />
+  <input id="myButton" type="button" value="foo" onclick="nWin('http://kpshek.github.io/tmp/cookie.html');" />
+
+  <script>
+    function nWin(url) {
+      window.open(url, "MsgWindow", "left=300,top=100,width=800, height=800,scrollbars=1");
+      return false;
+    }
+
+    var cookie = document.cookie;
+    var i = cookie.replace(/(?:(?:^|.*;\s*)myCookie\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    document.getElementById('cookie').innerHTML = cookie;
+    document.cookie = "myCookie=" + (parseInt((i || '0'))+1);
+  </script>
+</html>
