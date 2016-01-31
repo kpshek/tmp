@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Refresh Test</title>
+    <script type="text/javascript">
+      window.onbeforeunload = function(e) {
+        return 'onbeforeunload called';
+      };
+
+      $(window).unload(function() {
+        alert('Handler for .unload() called');
+      });
+    </script>
+  </head>
+  <body>
+    <p>Body</p>
+    <a href="https://google.com/">Google</a>
+    <p></p>
+    <a href="http://kpshek.github.io/tmp/refresh.html">Link</a>
+  </body>
+</html>
