@@ -9,6 +9,10 @@
         return 'onbeforeunload called';
       };
 
+      window.onload = function() {
+        alert('window.onload called');
+      }
+
       // $(window).unload(function() {
       //   alert('Handler for .unload() called');
       // });
